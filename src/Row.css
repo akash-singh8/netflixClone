@@ -1,0 +1,31 @@
+
+.row{
+    margin: 0 22px;
+    margin-bottom: 25px;
+}
+
+.row_posters{
+    column-gap: 14px;
+    display: flex;
+    /* by adding padding it'll help us to transform each item without being cropped */
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.row_posters::-webkit-scrollbar{
+    display: none;
+}
+
+.row_poster{
+    cursor: pointer;
+    object-fit: contain;
+    width: 100%;
+    max-width: 225px;
+    max-height: 225px;
+    transition: transform 0.25s;
+}
+
+.row_poster:hover{
+    transform: scale(1.05);
+}
